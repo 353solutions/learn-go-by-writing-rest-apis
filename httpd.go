@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"sort"
 
 	"github.com/gorilla/mux"
 )
@@ -64,9 +65,24 @@ func GetHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(reply)
 }
 
+// GetKeysHandler returns all the keys
+func GetKeysHandler(w http.ResponseWriter, r *http.Request) {
+	keys := make([]string, 0, len(db))
+	for key := range db {
+		keys = append(keys, key)
+	}
+
+	if r.URL.Query().Get("sort") == "true" {
+		sort.Strings(keys)
+	}
+
+	json.NewEncoder(w).Encode(keys)
+}
+
 func main() {
 	rtr := mux.NewRouter()
 	rtr.HandleFunc("/{key}", SetHandler).Methods("POST")
 	rtr.HandleFunc("/{key}", GetHandler).Methods("GET")
+	rtr.HandleFunc("/", GetKeysHandler).Methods("GET")
 	http.ListenAndServe(":8080", rtr)
 }
