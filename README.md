@@ -25,7 +25,7 @@ for people who would like to get started with Go.
 * We'll write the customary ["Hello World" program][hello-world]
 * Now we can add some [tests][tests]
 * Next we'll add [ping & time][ping] handlers
-* After that we'll [set and get keys](setget)
+* After that we'll [set and get keys][setget]
 
 [setup]: step_00/README.md
 [hello-world]: step_01/README.md
