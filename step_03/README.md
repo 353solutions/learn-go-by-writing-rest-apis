@@ -19,13 +19,14 @@ The first line (request line) states the request:
 * `HTTP/1.1` is the protocol
 
 After that we have a bunch of headers in `key: value` format. Then an empty
-line and (optional) body).
+line and (optional) body.
 
 ### URLs
 
 Let's assume we call `https://httpbin.org/get?x=1?y=2`, then
 
-* **https**://httpbin.org/get?x=1?y=2 - protocol
+    **https**://httpbin.org/get?x=1?y=2 - protocol
+
 * https://**httpbin.org**/get?x=1?y=2 - host
 * https://httpbin.org**/get**?x=1?y=2 - path
 * https://httpbin.org/get**?x=1?y=2** - query (or parameters)
