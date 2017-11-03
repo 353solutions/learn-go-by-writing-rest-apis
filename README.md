@@ -22,10 +22,12 @@ for people who would like to get started with Go.
 ## Chapters
 
 * In [Setup][setup] we'll make sure you have all the prerequisites
-* We'll write the customary "Hello World" program in [Hello World][hello-world]
+* We'll write the customary ["Hello World" program][hello-world]
+* Now we can add some [tests][tests]
 
 [setup]: step_00/README.md
 [hello-world]: step_01/README.md
+[tests]: step_02/README.md
 
 ## License
 

@@ -5,10 +5,11 @@ import (
 	"net/http"
 )
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "שלום Gophers")
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "שלום Gophers\n")
 }
 
 func main() {
-	http.Handle
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":8080", nil)
 }

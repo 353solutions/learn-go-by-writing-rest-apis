@@ -29,6 +29,16 @@ func main() {
 Let's go over the code line by line. We can clearly see the influence `C` has on
 Go.
 
+The formatting of the code is done by the `go fmt` tools. Most Go-aware editors
+run it on save. This ends most discussion on code format and styling - leaving
+time for more productive things.
+
+We [say][proverbs] that "Gofmt's style is no one's favorite, yet gofmt is
+everyone's favorite." - get used to it.
+
+[proverbs]: https://go-proverbs.github.io/
+
+
 ```go
 package main
 ```
@@ -75,6 +85,10 @@ socket the same way.
 information (we'll talk about structs later). Go has pointer but just as a mean
 for passing by reference. We don't have the C/C++ pointer operations which makes
 Go safer.
+
+We imported `net/http`, however when accessing types we use only the last part
+of the path so the types start with `http`.
+
 
 ```go
 	fmt.Fprintf(w, "שלום Gophers\n")
