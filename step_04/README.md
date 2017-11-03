@@ -38,7 +38,12 @@ _, ok := m["x"]
 if ok {
 	fmt.Println("x in m")
 }
-    
+```
+
+We delete values with `delete`
+
+```go
+delete(m, "x")
 ```
 
 You can see more about maps [here][maps.go]

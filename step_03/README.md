@@ -1,5 +1,35 @@
 # HTTP & Routing
 
+## HTTP Overview
+
+HTTP is a textual protocol over TCP/IP. An HTTP call looks like:
+
+```
+POST /x?ttl=10 HTTP/1.1
+Host: httpbin.org
+Connection: close
+Content-Length: 5
+
+hello
+```
+
+The first line (request line) states the request:
+* `POST` is the verb or method
+* `/x?ttl=10` is the path
+* `HTTP/1.1` is the protocol
+
+After that we have a bunch of headers in `key: value` format. Then an empty
+line and (optional) body).
+
+### URLs
+
+Let's assume we call `https://httpbin.org/get?x=1?y=2`, then
+
+* **https**://httpbin.org/get?x=1?y=2 - protocol
+* https://**httpbin.org**/get?x=1?y=2 - host
+* https://httpbin.org**/get**?x=1?y=2 - path
+* https://httpbin.org/get**?x=1?y=2** - query (or parameters)
+
 ## REST Overview
 
 Most operations on data can be summed with `CRUD` - Create, Retrieve, Update and
