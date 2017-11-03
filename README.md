@@ -24,10 +24,14 @@ for people who would like to get started with Go.
 * In [Setup][setup] we'll make sure you have all the prerequisites
 * We'll write the customary ["Hello World" program][hello-world]
 * Now we can add some [tests][tests]
+* Next we'll add [ping & time][ping] handlers
+* After that we'll [set and get keys](setget)
 
 [setup]: step_00/README.md
 [hello-world]: step_01/README.md
 [tests]: step_02/README.md
+[ping]: step_03/README.md
+[setget]: step_04/README.md
 
 ## License
 
