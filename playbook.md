@@ -1,7 +1,3 @@
-* Why Go?
-    - TBD
-* Make sure everyone has working Go installation and an IDE
-    - Able to `go run hw.go`
 * REST overview
     - CRUD -> REST (C: POST, R: GET, U: PUT/PATCH, D: DELETE)
     - HTTP/JSON (but not only JSON)

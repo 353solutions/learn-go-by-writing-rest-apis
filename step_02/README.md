@@ -93,13 +93,36 @@ val1, val2 = someFunction()
 It's very common in Go that the last value return is an error code. We don't use
 exceptions as in Python/C++/Java...
 
-### Exercise
+### `if` Statement
+
+Go has the usual `if` statement.
+
+```go
+if i > 0 {
+    fmt.Println("i is big")
+}
+```
+
+We don't need to place `()` around the condition.
+
+We can combine conditions with `|` for `or`, `&` for `and` and negate them with
+`!`
+
+```go
+if i > 0 & i < 10 {
+    fmt.Println("i is just right")
+}
+```
+
+We also have the usual comparison operators: `==`, `!=`, `>`, `>=`, `<` and
+`<=`.
+
+## Exercise
 
 Change `TestHome` to call `handler` and check that we get `שלום Gophers` back.
 
 Hint: See `ResponseRecorder` [example][resp-rec].
 
 [resp-rec]: https://golang.org/pkg/net/http/httptest/#example_ResponseRecorder
-
 
 [Solution](httpd_test.go)
