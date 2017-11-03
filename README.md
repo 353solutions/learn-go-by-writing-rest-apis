@@ -21,8 +21,11 @@ for people who would like to get started with Go.
 
 ## Chapters
 
-* In [Setup][step_00/README.md] we'll make sure you have all the prerequisites
+* In [Setup][setup] we'll make sure you have all the prerequisites
+* We'll write the customary "Hello World" program in [Hello World][hello-world]
 
+[setup]: step_00/README.md
+[hello-world]: step_01/README.md
 
 ## License
 [CC BY-NC-SA 4.0][license]
