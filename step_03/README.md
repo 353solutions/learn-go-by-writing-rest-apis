@@ -25,11 +25,10 @@ line and (optional) body.
 
 Let's assume we call `https://httpbin.org/get?x=1?y=2`, then
 
-    **https**://httpbin.org/get?x=1?y=2 - protocol
-
-* https://**httpbin.org**/get?x=1?y=2 - host
-* https://httpbin.org**/get**?x=1?y=2 - path
-* https://httpbin.org/get**?x=1?y=2** - query (or parameters)
+* `https` is the protocol
+* `httpbin.org` is the host
+* `/get` is the path
+* `x=1?y=2` are the parameters (or query)
 
 ## REST Overview
 
