@@ -28,4 +28,7 @@ for people who would like to get started with Go.
 [hello-world]: step_01/README.md
 
 ## License
+
 [CC BY-NC-SA 4.0][license]
+
+[license]: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

@@ -29,17 +29,19 @@ You don't have to use one, any odd editor combined with the Go tool chain will d
 but I highly encourage you to use an editor/IDE.
 
 Personally I'm using [Vim][vim] with [vim-go plugin][vim-go]. Vim is awesome
-and feature packed, however the learning curve might be steep.
+and feature packed, however the [learning curve][curve] might be [steep][steep].
 
 Other good options are [Visual Studio Code][vscode] with [Go
 extension][vscode-go] and [GoLand][goland].
 
-[ide]: https://en.wikipedia.org/wiki/Integrated_development_environment
-[vim]: http://www.vim.org/
-[vim-go]: https://github.com/fatih/vim-go
-[vscode]: https://code.visualstudio.com/
-[vscode-go]: https://marketplace.visualstudio.com/items?itemName=lukehoban.Go
+[curve]: http://www.terminally-incoherent.com/blog/2006/08/01/text-editor-learning-curves/
 [goland]: https://www.jetbrains.com/go/
+[ide]: https://en.wikipedia.org/wiki/Integrated_development_environment
+[vim-go]: https://github.com/fatih/vim-go
+[vim]: http://www.vim.org/
+[vscode-go]: https://marketplace.visualstudio.com/items?itemName=lukehoban.Go
+[vscode]: https://code.visualstudio.com/
+[steep]: https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/
 
 
 ## Git
