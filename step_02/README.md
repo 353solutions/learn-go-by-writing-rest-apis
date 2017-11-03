@@ -105,11 +105,11 @@ if i > 0 {
 
 We don't need to place `()` around the condition.
 
-We can combine conditions with `|` for `or`, `&` for `and` and negate them with
+We can combine conditions with `||` for `or`, `&&` for `and` and negate them with
 `!`
 
 ```go
-if i > 0 & i < 10 {
+if i > 0 && i < 10 {
     fmt.Println("i is just right")
 }
 ```
