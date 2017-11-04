@@ -68,17 +68,70 @@ fmt.Println(book[:3]) // "the"
 When we read from files (or sockets, or ...) we get a byte slice. It's an array
 of bytes and the type is `[]byte`. We'll talk about slices and arrays later.
 
+## defer
+
+Go have an automatic memory management (known as garbage collector or GC for
+short). However in our program we sometimes user other resources and we'd like
+to make sure they are closed when we're done with them.
+
+In C++/Java have `finally`, in Python we have `with` and in Go we have `defer`.
+
+`defer` get a function call and will execute is ones the current function
+exists.
+
+```go
+func cleanup() {
+	fmt.Println("cleanup")
+}
+
+func caller() {
+	defer cleanup()
+
+	fmt.Println("caller code")
+}
+```
+
+When we run this we'll see
+
+```
+caller code
+cleanup
+```
+
+`defer`ed are called in reverse order of invocation. Here's an example of
+making sure we closed a file once we opened it.
+
+```go
+file, err := os.Open("defer.go")
+if err != nil {
+	fmt.Printf("error: can't open - %s\n", err)
+	return
+}
+defer file.Close()
+
+// Work with file here
+```
+
 
 ## Exercise
 
 Add an option to set and get values from our server.
 
 * To set a value make a POST call `/db/<key>` with value as data
-    * `curl -XPOST -d22 http://localhost:8080/db/x`
 * To get a value make a GET call to `/db/key`
-    * `curl http://localhost:8080/db/x`
 
 Hint: To route everything under `/db` to the handler, mount it on `/db/` (e.g.
 `http.HandleFunc("/db/", dbHandler)`)
+
+
+### Testing
+
+Set Value
+
+    curl -XPOST -d1 http://localhost:8080/db/x
+
+Get Value
+
+    curl http://localhost:8080/db/x
 
 [Solution](httpd.go)

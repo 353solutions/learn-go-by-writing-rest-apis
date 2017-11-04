@@ -3,7 +3,7 @@
 Go comes with a simple test suite. We'll start by writing a simple test and
 placing it in a file called `httpd_test.go`.
 
-The `go build` toos ignores files ending with `_test.go` in the normal build process.
+The `go build` tool ignores files ending with `_test.go` in the normal build process.
 While the `go test` tool looks for them and executes every test function in
 them.
 
@@ -114,8 +114,19 @@ if i > 0 && i < 10 {
 }
 ```
 
-We also have the usual comparison operators: `==`, `!=`, `>`, `>=`, `<` and
-`<=`.
+Go has the usual comparison operators: `==`, `!=`, `>`, `>=`, `<` and `<=`.
+
+We can also assign and check in one `if` statement. This is very common combined
+with error checking.
+
+```
+if err := writeMetric("num_errors", 0); err != nil {
+	fmt.Println(err)
+}
+```
+
+
+See more [here](cond.go)
 
 ## Exercise
 

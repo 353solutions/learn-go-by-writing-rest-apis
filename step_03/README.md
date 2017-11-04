@@ -92,10 +92,25 @@ Add two HTTP end points to our server.
 
 * `/ping` should accept GET request and return `PONG`
     * If ping gets a `msg` parameter it should return it instead of `PONG`
-* `/time` should accept the a GET request and return the current time in RFC3339
+* `/time` should accept a GET request and return the current time in RFC3339
   format
 
 Hint: The [time][time] package
+
+### Testing
+
+Normal ping
+
+    curl http://localhost:8080/ping
+
+Ping with parameters
+
+    curl "http://localhost:8080/ping?msg=hi"
+
+Time
+    
+    curl http://localhost:8080/time
+
 
 [Solution](httpd.go)
 

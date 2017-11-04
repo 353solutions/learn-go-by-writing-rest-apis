@@ -140,6 +140,9 @@ default values to function parameter in Go.
 `ListenAndServe` will run in infinite loop waiting for HTTP requests from
 clients.
 
+The Go HTTP server is very fast and powerful. It can serve many requests, handle
+SSL and supports HTTP 2.
+
 ## Running
 
 Go compile our program run
@@ -156,7 +159,9 @@ Now we can run it
     ./httpd
 
 Once you run your program, point your browser to `http://localhost:8080` and you
-should see our message there.
+should see our message there. Or you can use `curl`
+
+    curl http://localhost:8080
 
 Since go compiles quicky, you can also execute 
 
