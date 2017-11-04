@@ -46,8 +46,6 @@ We delete values with `delete`
 delete(m, "x")
 ```
 
-You can see more about maps [here][maps.go]
-
 ## Slicing
 
 To get parts of string (and other data structures) we can use slicing. The

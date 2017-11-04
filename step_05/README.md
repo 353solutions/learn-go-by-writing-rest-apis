@@ -20,8 +20,6 @@ To add values, use [append][append]
 names = append(names)
 ```
 
-See more [here](slices.go)
-
 [append]: https://golang.org/pkg/builtin/#append
 [slice]: https://blog.golang.org/go-slices-usage-and-internals
 
@@ -79,8 +77,6 @@ for i, c := range s {
 }
 ```
 
-See more [here](for.go)
-
 ## The Empty Interface
 
 Go is a typed language. I some ways it's more strict than C/Java - for example
@@ -99,7 +95,6 @@ fmt.Printf("%v (%T)\n", i, i) // 10 (int)
 i = "hello"
 fmt.Printf("%v (%T)\n", i, i) // hello (string)
 ```
-
 
 ## JSON
 

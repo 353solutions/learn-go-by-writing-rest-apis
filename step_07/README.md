@@ -10,7 +10,7 @@ with need. This allows us to run thousands of goroutines on a single machine
 without any issue. Every time our we server get a new connection, it spins a new
 goroutine to handle it. 
 
-Here's a simple [example](goroutines.go)
+Here's a simple example:
 
 ```go
 func Printer(name string) {

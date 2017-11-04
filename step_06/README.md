@@ -31,7 +31,7 @@ beta.
 
 A mux (multiplexer) is a router that routes HTTP paths to handler. You can use
 regular expression in paths and also give names to parts of the path. Let's see
-an [example](mux.go).
+an example.
 
 ```go
 package main

@@ -25,7 +25,7 @@ for people who would like to get started with Go.
 * We'll use [gorilla/mux][mux] to simplify routing
     - `go get`
 * Finally we'll support [concurrency][sync]
-    - goroutines, channels
+    - goroutines, locks, struct
 
 [setup]: step_00/README.md
 [hello-world]: step_01/README.md
@@ -35,6 +35,38 @@ for people who would like to get started with Go.
 [keys]: step_05/README.md
 [mux]: step_06/README.md
 [sync]: step_07/README.md
+
+## Go Wild
+
+The best way to learn a language is to find a problem and solve it using a
+language. If the problem is something that "itches" you - even better.
+
+Here are some idea on how to improve our we server:
+
+* Add command line argument for the port to listen on
+* Support multiple databases
+* Instead of a `sync.Mutex` to guard our data structure. Use a goroutine that
+  will listen on a channel for commands and return result over a channel
+* Implement more commands, see [redis commands][redis] for inspiration
+* ...
+
+[redis]: https://redis.io/commands
+
+## Examples
+
+List of examples used in the lessons:
+
+* [cond.go](examples/cond.go) - Conditionals
+* [defer.go](examples/defer.go) - defer
+* [empty-iface.go](examples/empty-iface.go) - The empty interface
+* [for.go](examples/for.go) - For loops
+* [goroutines.go](examples/goroutines.go) - goroutines
+* [json.go](examples/json.go) - JSON encoding
+* [maps.go](examples/maps.go) - maps
+* [mux.go](examples/mux.go) - gorilla/mux
+* [slices.go](examples/slices.go) - Slices
+* [struct.go](examples/struct.go) - Structs
+* [vars.go](examples/vars.go) - Variable declaration
 
 ## License
 

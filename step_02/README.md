@@ -125,9 +125,6 @@ if err := writeMetric("num_errors", 0); err != nil {
 }
 ```
 
-
-See more [here](cond.go)
-
 ## Exercise
 
 Change `TestHome` to call `handler` and check that we get `שלום Gophers` back.
