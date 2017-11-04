@@ -9,16 +9,6 @@ for people who would like to get started with Go.
 
 [go]: https://golang.org
 
-## Topics Covered
-* Why Go?
-* REST overview
-* Types: numbers, strings, maps, slices, structs and interfaces
-* Control flow: functions, loops and conditions
-* Concurrency: goroutines and channels
-* Packages: Export rule, GOPATH and vendoring
-* Writing web servers
-* Using the go tool for development: build, run, test, install dependencies 
-
 ## Chapters
 
 * In [Setup][setup] we'll make sure you have all the prerequisites
@@ -32,6 +22,10 @@ for people who would like to get started with Go.
     - map, slicing, byte arrays, defer
 * Then we'll return all the [keys][keys]
     - slices, `for` loop, empty interface, JSON
+* We'll use [gorilla/mux][mux] to simplify routing
+    - `go get`
+* Finally support [concurrency][chan] next
+    - goroutines, channels
 
 [setup]: step_00/README.md
 [hello-world]: step_01/README.md
@@ -39,6 +33,7 @@ for people who would like to get started with Go.
 [ping]: step_03/README.md
 [setget]: step_04/README.md
 [keys]: step_05/README.md
+[mux]: step_06/README.md
 
 ## License
 

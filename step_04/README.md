@@ -66,7 +66,7 @@ fmt.Println(book[:3]) // "the"
 ## Byte Slices
 
 When we read from files (or sockets, or ...) we get a byte slice. It's an array
-of bytes and the type is `[]byte`. We'll talk about slices and arrays later.
+of bytes and the type is `[]byte`. We'll talk more about slices later.
 
 ## defer
 
