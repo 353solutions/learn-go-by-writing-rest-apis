@@ -24,7 +24,7 @@ for people who would like to get started with Go.
     - slices, `for` loop, empty interface, JSON
 * We'll use [gorilla/mux][mux] to simplify routing
     - `go get`
-* Finally support [concurrency][chan] next
+* Finally we'll support [concurrency][sync]
     - goroutines, channels
 
 [setup]: step_00/README.md
@@ -34,6 +34,7 @@ for people who would like to get started with Go.
 [setget]: step_04/README.md
 [keys]: step_05/README.md
 [mux]: step_06/README.md
+[sync]: step_07/README.md
 
 ## License
 
