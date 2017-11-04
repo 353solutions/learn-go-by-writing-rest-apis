@@ -48,6 +48,7 @@ Here are some idea on how to improve our we server:
 * Instead of a `sync.Mutex` to guard our data structure. Use a goroutine that
   will listen on a channel for commands and return result over a channel
 * Implement more commands, see [redis commands][redis] for inspiration
+* Test everything
 * ...
 
 [redis]: https://redis.io/commands
