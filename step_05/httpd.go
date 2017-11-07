@@ -59,6 +59,7 @@ func dbHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method == "POST" {
+		defer r.Body.Close()
 		value, err := ioutil.ReadAll(r.Body)
 		if err != nil {
 			http.Error(w, "Can't read body", http.StatusInternalServerError)
