@@ -39,7 +39,7 @@ Delete.
 In REST we make HTTP calls to a server and use HTTP methods to describe which
 operation we'd like to do. The mapping of CRUD to REST is
 
-* **C**create -> POST
+* **C**reate -> POST
 * **R**etrieve -> GET
 * **U**pdate -> PUT/PATCH
 * **D**elete -> DELETE
