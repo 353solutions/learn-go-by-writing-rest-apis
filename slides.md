@@ -100,9 +100,7 @@ We'll build an in-memory key/value HTTP server
 
 ---
 
-### https://github.com/353solutions/learn-go-by-writing-rest-apis
-
----
-
 # Let's Roll
+### http://bit.ly/go-rest
+
 
