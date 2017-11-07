@@ -123,11 +123,15 @@ if err := enc.Encode(data); err != nil {
 ## Exercise
 
 Add a `/keys` entry point which will return all the keys in the database as a
-JSON array.
+JSON array in an object (see below).
 
 
 ### Testing
 
     curl http://localhost:8080/keys
+
+    {
+	"keys": ["x", "y"]
+    }
 
 [Solution](httpd.go)
