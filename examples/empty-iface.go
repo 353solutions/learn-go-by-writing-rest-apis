@@ -1,3 +1,4 @@
+// The empty interface
 package main
 
 import "fmt"

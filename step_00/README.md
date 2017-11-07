@@ -1,6 +1,6 @@
 # Setup
 
-Let's make sure you have a working Go environment.
+Let's make sure you have everything needed for this workshop.
 
 
 ## Go
@@ -37,18 +37,19 @@ extension][vscode-go] and [GoLand][goland].
 [curve]: http://www.terminally-incoherent.com/blog/2006/08/01/text-editor-learning-curves/
 [goland]: https://www.jetbrains.com/go/
 [ide]: https://en.wikipedia.org/wiki/Integrated_development_environment
+[steep]: https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/
 [vim-go]: https://github.com/fatih/vim-go
 [vim]: http://www.vim.org/
 [vscode-go]: https://marketplace.visualstudio.com/items?itemName=lukehoban.Go
 [vscode]: https://code.visualstudio.com/
-[steep]: https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/
 
 
 ## Git
 
-The `go` tool that among other things installs third-party packages uses
-[git][git] under the hood to download packages. Most Linux/OSx systems already
-have git installed but on Windows you'll need to install it yourself.
+One of the uses of the `go` tool is to install third party packages. When
+installing it uses [git][git] (or other source control systems) to download
+packages. Most Linux/OSx systems already have git installed but on Windows
+you'll need to install it yourself.
 
 To make sure you have a working git open a terminal/command prompt
 and type:
@@ -63,9 +64,9 @@ You should see output similar to
 
 ## curl
 
-We are going to build a web server and issue HTTP calls to it. Some of them can
-be done with the browser, but we'll also make POST requests and for this we'll
-use [curl][curl].
+We are going to build a web server and send HTTP requests to it. Some of them
+can be done with the browser, but we'll also make POST requests and for this
+we'll use [curl][curl].
 
 
 To make sure you have a working git open a terminal/command prompt
@@ -81,7 +82,9 @@ You should see output similar to
 
 
 If you're not comfortable with the command line, another option to try is
-[Postman][postman] which is a browser extension that let's you do POST requests.
+[Postman][postman] which is a browser extension that let's you do POST
+requests.
 
 [curl]: https://curl.haxx.se/
 [postman]: https://www.getpostman.com/
+

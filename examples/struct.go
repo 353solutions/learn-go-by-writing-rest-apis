@@ -1,3 +1,4 @@
+// struct example
 package main
 
 import "fmt"

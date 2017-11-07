@@ -31,7 +31,10 @@ m["x"] = 2
 val := m["x"]
 ```
 
-And we can check if a keys exists with
+If a key does not exists in the map, we'll get the zero value for the type of
+map values. e.g. `0` for integers `""` for strings ...
+
+We can check if a keys exists with
 
 ```go
 _, ok := m["x"]
@@ -48,10 +51,11 @@ delete(m, "x")
 
 ## Slicing
 
-To get parts of string (and other data structures) we can use slicing. The
-syntax of slicing if `[start:stop]` where `start` and `stop` are indices. Slices
-are "half-open" meaning we'll get the first index but not the last. We can omit
-the `start` or `end` and Go will fill then in for us.
+To get parts of string (and other data structures such as slices and arrays) we
+can use slicing. The syntax of slicing if `[start:stop]` where `start` and
+`stop` are indices. Slices are "half-open" meaning we'll get the first index
+but not the last. We can omit the `start` or `end` and Go will fill then in for
+us.
 
 ```go
 book := "the colour of magic"
@@ -63,18 +67,18 @@ fmt.Println(book[:3]) // "the"
 
 ## Byte Slices
 
-When we read from files (or sockets, or ...) we get a byte slice. It's an array
-of bytes and the type is `[]byte`. We'll talk more about slices later.
+When we read from files (or sockets, or ...) we get a byte slice. It's a
+sequence of bytes and the type is `[]byte`. We'll talk more about slices later.
 
 ## defer
 
-Go have an automatic memory management (known as garbage collector or GC for
-short). However in our program we sometimes user other resources and we'd like
-to make sure they are closed when we're done with them.
+Go has automatic memory management (known as garbage collector or GC for
+short). However we sometimes use other resources (such as files, locks ...) and
+would like to make sure they are released when we no longer need them.
 
 In C++/Java have `finally`, in Python we have `with` and in Go we have `defer`.
 
-`defer` get a function call and will execute is ones the current function
+`defer` gets a function call and will execute is once the current function
 exists.
 
 ```go
@@ -96,8 +100,8 @@ caller code
 cleanup
 ```
 
-`defer`ed are called in reverse order of invocation. Here's an example of
-making sure we closed a file once we opened it.
+`defer`ed are called in reverse order of declaration. Here's an example of
+making sure we close a file once we open it.
 
 ```go
 file, err := os.Open("defer.go")
@@ -116,9 +120,10 @@ defer file.Close()
 Add an option to set and get values from our server.
 
 * To set a value make a POST call `/db/<key>` with value as data
+    * Make sure to that `r.Body` is closed
 * To get a value make a GET call to `/db/key`
 
-Hint: To route everything under `/db` to the handler, mount it on `/db/` (e.g.
+Hint: To route everything under `/db` to a handler, mount it on `/db/` (e.g.
 `http.HandleFunc("/db/", dbHandler)`)
 
 

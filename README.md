@@ -3,16 +3,19 @@
 Miki Tebeka <miki@353solutions.com>
 
 ## Abstract
-In this hands-on course, learn get started with the [Go programming
+
+In this hands-on workshop about getting started with the [Go programming
 language][go]. Learning will be done by writing some REST APIs. This class is
-for people who would like to get started with Go.
+for people who would like to get started with Go and have some experience in
+programming.
 
 [go]: https://golang.org
 
 ## Chapters
 
-* In [Setup][setup] we'll make sure you have all the prerequisites
-* We'll write the customary ["Hello World" program][hello-world]
+* In [Setup][setup] we'll make sure you have all that is needed to complete the
+  workshop
+* We'll start by writing the customary ["Hello World" program][hello-world]
     - Program structure, import path, types
 * Now we can add some [tests][tests]
     - Testing, declarations, `if` statement
@@ -38,17 +41,19 @@ for people who would like to get started with Go.
 
 ## Go Wild
 
-The best way to learn a language is to find a problem and solve it using a
-language. If the problem is something that "itches" you - even better.
+The best way to learn a programming language is to find a problem and solve it
+using the language. If the problem is something that "itches" you - even
+better.
 
-Here are some idea on how to improve our we server:
+Here are some ideas on how to improve our web server:
 
-* Add command line argument for the port to listen on
+* Add a command line argument for the port to listen on
 * Support multiple databases
-* Instead of a `sync.Mutex` to guard our data structure. Use a goroutine that
-  will listen on a channel for commands and return result over a channel
+* Instead of using a `sync.Mutex` to guard our data structure. Use a goroutine
+  that will listen on a channel for commands and return result over a channel
 * Implement more commands, see [redis commands][redis] for inspiration
 * Test everything
+    - Including running the server and calling it over HTTP
 * ...
 
 [redis]: https://redis.io/commands
@@ -68,6 +73,21 @@ List of examples used in the lessons:
 * [slices.go](examples/slices.go) - Slices
 * [struct.go](examples/struct.go) - Structs
 * [vars.go](examples/vars.go) - Variable declaration
+
+## References
+* [Go main site][go]
+* [Package Documentation][pkg]
+* [External Packages Documentation][godoc]
+* [Effective go][effective]
+* [How to Write Go Code][write]
+* [A Tour of Go][tour]
+* When Googling - use the term `golang`
+
+[effective]: https://golang.org/doc/effective_go.html
+[godoc]: https://godoc.org/
+[pkg]: https://golang.org/pkg/
+[tour]: https://tour.golang.org/welcome/1
+[write]: https://golang.org/doc/code.html
 
 ## License
 

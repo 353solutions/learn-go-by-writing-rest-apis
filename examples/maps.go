@@ -1,3 +1,4 @@
+// Using maps
 package main
 
 import "fmt"

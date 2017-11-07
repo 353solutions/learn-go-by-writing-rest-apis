@@ -11,15 +11,16 @@ Connection: close
 Content-Length: 5
 
 hello
+
 ```
 
 The first line (request line) states the request:
-* `POST` is the verb or method
+* `POST` is the method (or verb)
 * `/x?ttl=10` is the path
 * `HTTP/1.1` is the protocol
 
 After that we have a bunch of headers in `key: value` format. Then an empty
-line and (optional) body.
+line and an optional body.
 
 ### URLs
 
@@ -28,14 +29,14 @@ Let's assume we call `https://httpbin.org/get?x=1?y=2`, then
 * `https` is the protocol
 * `httpbin.org` is the host
 * `/get` is the path
-* `x=1?y=2` are the parameters (or query)
+* `x=1?y=2` are the query (or parameters)
 
 ## REST Overview
 
 Most operations on data can be summed with `CRUD` - Create, Retrieve, Update and
 Delete.
 
-In REST we make HTTP calls to a server to and use HTTP verbs to describe which
+In REST we make HTTP calls to a server and use HTTP methods to describe which
 operation we'd like to do. The mapping of CRUD to REST is
 
 * **C**create -> POST

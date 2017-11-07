@@ -1,3 +1,4 @@
+// slices usage
 package main
 
 import "fmt"

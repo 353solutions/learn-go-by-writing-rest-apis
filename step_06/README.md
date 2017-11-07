@@ -5,7 +5,7 @@
 
 Go is a simple language by design, and the design of `net/http` reflects that.
 Sometimes we'd like easier support for routing and other tasks. For this we can
-install third-party packages.
+install a third-party package.
 
 We're going to use [gorilla/mux][mux] to simplify out routing.
 
@@ -16,13 +16,13 @@ command in a terminal/command prompt:
 go get github.com/gorilla/mux
 ```
 
-This will fetch and install the `gorilla/mux` package under your current
-`$GOPATH`. You can start importing the package in your code now.
+This will fetch (using `git`) and install the `gorilla/mux` package under your
+current `$GOPATH`. You can start importing the package in your code now.
 
 If the Go code finds out that a package you install depends on other packages -
-it will install it as well. There are several external tools for managing
-dependencies and [dep][dep] is emerging as the official one - but it's still in
-beta.
+it will install these dependencies as well. There are several external tools
+for managing dependencies and [dep][dep] is emerging as the official one - but
+it's still in beta.
 
 [dep]: https://github.com/golang/dep
 [mux]: http://www.gorillatoolkit.org/pkg/mux

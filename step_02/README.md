@@ -34,11 +34,12 @@ You should see your first passing test!
 ## Handler Test
 
 To test our HTTP server we have two options. We can either run it as a process
-and then issue HTTP calls to it, or we can test the handlers directly.
+and then issue HTTP requests to it, or we can test the handler functions
+directly.
 
-We'll go with the second approach and use the `net/http/httptest` package. Which
-lets use create new requests and `http.ResponseWriter` that records what was
-written to it.
+We'll go with the second approach and use the `net/http/httptest` package.
+Which lets us create new requests and `http.ResponseWriter` that records what
+was written to it.
 
 If you look in the [documentation of httptest][httptest] you'll see:
 
@@ -46,8 +47,8 @@ If you look in the [documentation of httptest][httptest] you'll see:
 func NewRequest(method, target string, body io.Reader) *http.Request
 ```
 
-The `net/http/httptest` defines `NewRequest`. We don't have constructors like in
-other OO packages. In Go we define `New<TYPE>` function that returns a new
+The `net/http/httptest` defines `NewRequest`. In Go, we don't have constructors like in
+other OO languages, instead we define `New<TYPE>` function that returns a new
 object.
 
 [httptest]: https://golang.org/pkg/net/http/httptest/
@@ -90,8 +91,8 @@ assignment.
 val1, val2 = someFunction()
 ```
 
-It's very common in Go that the last value return is an error code. We don't use
-exceptions as in Python/C++/Java...
+It's very common in Go that the last value a functions returns is an error
+code. We don't use exceptions as in Python/C++/Java...
 
 ### `if` Statement
 

@@ -79,7 +79,7 @@ for i, c := range s {
 
 ## The Empty Interface
 
-Go is a typed language. I some ways it's more strict than C/Java - for example
+Go is a typed language. In some ways it's more strict than C/Java - for example
 you can't divide a integer with a float. However sometimes we'd like a variable
 that holds any type (`object` in Java, `void *` in C/C++ ...). In Go this type
 is the empty interface, which is written as `interface{}`.

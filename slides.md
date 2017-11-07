@@ -44,7 +44,7 @@ miki@353solutions.com @tebeka
 # JVM
 
 
-1,000,000 things I hate about you
+1,000,000 Things I Hate About You
 
 ---
 

@@ -6,8 +6,8 @@ goroutines and channels.
 ## goroutines
 
 goroutines are "light weight" threads. They start with a 2Kb stack that grows
-with need. This allows us to run thousands of goroutines on a single machine
-without any issue. Every time our we server get a new connection, it spins a new
+with need. This allows Go to easily run thousands of goroutines on a single
+machine. Every time our we server get a new connection, it spins a new
 goroutine to handle it. 
 
 Here's a simple example:
@@ -24,7 +24,7 @@ func main() {
 		go Printer(name)
 	}
 
-	// Wait for the goroutines to finish (there are better ways, see sync.WaitGroup
+	// Wait for the goroutines to finish (there are better ways, see sync.WaitGroup)
 	time.Sleep(time.Millisecond)
 }
 ```
@@ -43,10 +43,10 @@ channels. But we won't get there this time.
 
 ## Structs
 
-Sometimes we'd like to define out own data type. In this case we'll use a
-`struct` which is a set of name fields, each with it's own type.
+Sometimes we'd like to define out own data types. In this case we'll use a
+`struct` which is a set of named fields, each with it's own type.
 
-Let's define a [Loon][loon] struct that will hold name and age.
+Let's define a [Loon][loon] struct that will have a name and an age.
 
 ```go
 type Loon struct {
@@ -70,8 +70,8 @@ or we can specify the field names
 	}
 ```
 
-We don't have constructors in Go, we simply write a function that creates a new
-struct and return it. This function is  usually called `New<Type>`
+We don't have constructors in Go, instead we write a function that creates a
+new struct and return it. This function is  usually called `New<Type>`
 
 ```go
 func NewLoon(name string, age int) *Loon {
@@ -82,20 +82,20 @@ func NewLoon(name string, age int) *Loon {
 We return a pointer to the object we created, so we can reference it and not
 copy it over.
 
-People coming from C/C++ will see a but in `NewLoon` since it returns a pointer
-to something allocated on the stack. The Go compiler does what's called "escape
-analysis" and sees that we return a pointer to the new allocated `Loon` so it'll
-create it on the heap.
+People coming from C/C++ will see a bug in `NewLoon` since it returns a pointer
+to an object allocated on the stack. The Go compiler does what's called "escape
+analysis" and sees that we return a pointer to the new allocated `Loon` so
+it'll create it on the heap.
 
 `struct`s can also have methods, embed others and much more. But we won't get
-into that.
+into that this time.
 
 [loon]: https://en.wikipedia.org/wiki/Looney_Tunes
 
 ## Exercise
 
 Change our `db` to be a struct that holds the map and also a `sync.Mutex`.
-Every time we access the data, `Lock` the mutex, make sure to `Unlock` it with
-`defer`
+Every time we access the data, `Lock` the mutex, make sure to `Unlock` when
+you're done.
 
 [Solution](httpd.go)

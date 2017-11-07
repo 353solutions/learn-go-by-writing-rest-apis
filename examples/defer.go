@@ -1,3 +1,4 @@
+// defer examples
 package main
 
 import (
