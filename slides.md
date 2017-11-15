@@ -8,9 +8,11 @@ CEO, CTO, UFO ...
 
 ### [353solutions][353]
 
-miki@353solutions.com @tebeka
+[miki@353solutions.com][email] [@tebeka][twitter]
 
 [353]: https://www.353solutions.com
+[email]: mailto:miki@353solutions.com]
+[twitter]: https://twitter.com/tebeka
 
 ---
 
